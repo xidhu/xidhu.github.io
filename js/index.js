@@ -353,7 +353,7 @@ const createEmailBody = (nm, email, desc) => {
 </head>
 
 <body style="font-family: 'Poppins', sans-serif;text-align:center;color:rgb(102, 101, 101);">
-  <img src="https://xidhu.github.io/xidhu/assets/png/main-image.png" style="width:10rem;" alt="It's Me Xidhu">
+  <img src="https://xidhu.github.io/assets/png/main-image.png" style="width:10rem;" alt="It's Me Xidhu">
   <h3 style="font-size: 1.6rem;
   font-weight: 400;
   margin:  1.2rem 0;">Hi <span style="color: red">${nm}</span> </h3>
