@@ -398,21 +398,22 @@ const showAlert = (title,desc) => {
 let name_ = document.querySelector(".name_");
 let email_ = document.querySelector(".email_");
 let description_ = document.querySelector(".description_");
-const token="97ccde88-e131-4e69-805c-52c2a45898ea";
+const token="123af0b0-cfb8-4db8-901f-837d852f11ec";
 
 const sendData = (nm, em, desc) => {
   Email.send({
     SecureToken : token,
     To : "sidhu3612@gmail.com",
-    From : "noreply@xidhu.me",
+    From : "xidhu.me@gmail.com",
     Subject : "Someone Contacted",
     Body : createEmailBody(nm, em, desc),
 }).then(
     (msg) => {
+      console.log(msg);
       Email.send({
         SecureToken : token,
         To : em,
-        From : "noreply@xidhu.me",
+        From : "xidhu.me@gmail.com",
         Subject : "Xidhu",
         Body : createEmailBody(nm, false, false),
     }).then((message) => showAlert(message == "OK" ?"Message Sent":"Message Not Sent" ,message == "OK" ? "Message Sent.Check Your Mail Spam Folder" : "Message Not Sent.Try Again."));

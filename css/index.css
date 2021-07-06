@@ -412,6 +412,8 @@ a{
       .input-des{
         height: 8rem;
         align-items: flex-start;
+        word-break: break-word;
+
 
       }
       .input-des > *{
@@ -751,11 +753,18 @@ a{
       .input-des{
         height: 8rem;
         align-items: flex-start;
+        
 
       }
       .input-des > *{
         margin-top: 1rem;
+        text-decoration: none;
         
+      }
+
+      .description_{
+        outline:none;
+        text-decoration: none !important;
       }
 
       .submit{
