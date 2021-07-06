@@ -353,7 +353,6 @@ const createEmailBody = (nm, email, desc) => {
 </head>
 
 <body style="font-family: 'Poppins', sans-serif;text-align:center;color:rgb(102, 101, 101);">
-  <img src="https://xidhu.github.io/xidhu/assets/png/main-image.png" style="width:10rem;" alt="It's Me Xidhu">
   <h3 style="font-size: 1.6rem;
   font-weight: 400;
   margin:  1.2rem 0;">Hi <span style="color: red">${nm}</span> </h3>
@@ -400,28 +399,24 @@ const showAlert = (title,desc) => {
 let name_ = document.querySelector(".name_");
 let email_ = document.querySelector(".email_");
 let description_ = document.querySelector(".description_");
+const token="17cec32a-138a-47c3-aa6e-14144837cc5c";
 
 const sendData = (nm, em, desc) => {
   Email.send({
-    Host: "smtp.elasticemail.com",
-    Username: "sidhu3612@gmail.com",
-    Password: "3BD47ABBCE9BFCCD324B74A35BD48A1A4AC5",
-    To: "sidhu3612@gmail.com",
-    From: "sidhu3612@gmail.com",
-    Subject: "Someone Contacted",
-    Body: createEmailBody(nm, em, desc),
-
-  }).then(
+    SecureToken : token,
+    To : "sidhu3612@gmail.com",
+    From : "noreply@xidhu.me",
+    Subject : "Someone Contacted",
+    Body : createEmailBody(nm, em, desc),
+}).then(
     (msg) => {
       Email.send({
-        Host: "smtp.elasticemail.com",
-        Username: "sidhu3612@gmail.com",
-        Password: "3BD47ABBCE9BFCCD324B74A35BD48A1A4AC5",
-        To: em,
-        From: "sidhu3612@gmail.com",
-        Subject: "Xidhu",
-        Body: createEmailBody(nm, false, false),
-      }).then((message) => showAlert(message == "OK" ?"Message Sent":"Message Not Sent" ,message == "OK" ? "Message Sent.Check Your Mail Spam Folder" : "Message Not Sent.Try Again."));
+        SecureToken : token,
+        To : em,
+        From : "noreply@xidhu.me",
+        Subject : "Xidhu",
+        Body : createEmailBody(nm, false, false),
+    }).then((message) => showAlert(message == "OK" ?"Message Sent":"Message Not Sent" ,message == "OK" ? "Message Sent.Check Your Mail Spam Folder" : "Message Not Sent.Try Again."));
     }
   );
 };
