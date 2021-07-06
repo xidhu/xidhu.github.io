@@ -358,7 +358,7 @@ const createEmailBody = (nm, email, desc) => {
   <p>Thanks for Contacting Me</p>
   <p style="font-size:0.6rem;margin: -1rem 0rem;">I will send an update within few days</p>
   <h3 style="color: red; margin: 2rem 0rem;" >Have A Nice Day..!</h3><br>
-  <a href="https://xidhu.github.io/xidhu" style="
+  <a href="https://xidhu.github.io" style="
   background-color:gray;
   color:white;
   text-decoration: none;
