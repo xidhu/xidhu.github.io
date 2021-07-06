@@ -351,12 +351,7 @@ const createEmailBody = (nm, email, desc) => {
   <meta name="viewport" content="width=device-width">
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
-
 <body style="font-family: 'Poppins', sans-serif;text-align:center;color:rgb(102, 101, 101);">
-<<<<<<< HEAD
-=======
-  <img src="https://xidhu.github.io/assets/png/main-image.png" style="width:10rem;" alt="It's Me Xidhu">
->>>>>>> e9ccfa8f16bc2dd8ad9300465fdfd8a48153136a
   <h3 style="font-size: 1.6rem;
   font-weight: 400;
   margin:  1.2rem 0;">Hi <span style="color: red">${nm}</span> </h3>
