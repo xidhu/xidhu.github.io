@@ -356,7 +356,7 @@ const createEmailBody = (nm, email, desc) => {
   font-weight: 400;
   margin:  1.2rem 0;">Hi <span style="color: red">${nm}</span> </h3>
   <p>Thanks for Contacting Me</p>
-  <p style="font-size:0.6rem;margin: -1rem 0rem;">I will send an update within few days</p>
+  <p style="font-size:0.6rem;margin: -1rem 0rem;">I will send an update within a few days</p>
   <h3 style="color: red; margin: 2rem 0rem;" >Have A Nice Day..!</h3><br>
   <a href="https://xidhu.github.io" style="
   background-color:gray;
