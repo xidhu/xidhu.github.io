@@ -116,12 +116,7 @@ table {
 
 
 
-.github-corner{
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-}
+
 
 .show{
     display: block;
@@ -698,6 +693,14 @@ a{
         display: block;
     }
 
+    .github-corner{
+        
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+    }
+
     .icon{
         background-color:var(--light-grey);
         padding: 0.6rem;
@@ -708,10 +711,7 @@ a{
         
     }
 
-    .github-corner{
-        display: block;
-        
-    }
+    
 
     
 
