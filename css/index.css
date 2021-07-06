@@ -355,6 +355,10 @@ a{
         display: block;
     }
 
+    .github-corner{
+        display: none;
+    }
+
     .icon{
         background-color:var(--white);
         padding: 0.3rem;
