@@ -22,11 +22,11 @@
 
 
 .reveal-start{
-  animation: reveal 0.5s;
+  animation: reveal 1s;
 }
 
 .reveal-end{
-  animation: unreveal 0.5s;
+  animation: unreveal 1s;
 }
 
 .zoom{
@@ -344,6 +344,10 @@ html {
        
       }
       
+      50% {
+        opacity: 0;
+        
+      }
       
       100% {
         opacity: 1;
@@ -354,14 +358,17 @@ html {
 
     @keyframes unreveal {
       0% {
-        opacity: 0;
+        opacity: 1;
         transform: translateX(0%);
        
       }
-      
+      50% {
+        opacity: 0;
+        
+      }
       
       100% {
-        opacity: 1;
+        opacity: 0;
         transform: translateX(-100%);
       }
       
@@ -375,27 +382,31 @@ html {
        
       }
       
+      50% {
+        opacity: 0;
+        
+      }
       
       100% {
         opacity: 1;
         transform: translateY(0%);
       }
-
-      
-
-      
       
     }
+
     @keyframes unreveal {
       0% {
-        opacity: 0;
+        opacity: 1;
         transform: translateY(0%);
        
       }
-      
+      50% {
+        opacity: 0;
+        
+      }
       
       100% {
-        opacity: 1;
+        opacity: 0;
         transform: translateY(-100%);
       }
       

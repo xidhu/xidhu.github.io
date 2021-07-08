@@ -108,14 +108,14 @@ const reveal = (e) => {
   e.classList.add('reveal-start');
   setTimeout(() => {
     e.classList.remove('reveal-start');
-  }, 500);
+  }, 1000);
 }
 
 const unreveal = (e) => {
   e.classList.add('reveal-end');
   setTimeout(() => {
     e.classList.remove('reveal-end');
-  }, 500);
+  }, 1000);
 }
 
 
