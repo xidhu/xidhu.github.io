@@ -1,8 +1,6 @@
 
 
-//load
-window.onload = function() {setTimeout(function(){document.body.style.display="block";
-document.body.style.opacity=1;},500);};
+
 //ripple effect
 function ripple_eff(e) {
 
@@ -131,14 +129,17 @@ let prevIndex = 0;
 
 const transition = (index) => {
 
-  unreveal(sections[prevIndex]);
-  setTimeout(() => {
-    sections[prevIndex].classList.replace('show', 'hide');
-    sections[index].classList.replace('hide', 'show');
-    reveal(sections[index]);
-    prevIndex = index;
-    if (index === 2) setSkills();
-  }, 500)
+
+  if (index != prevIndex) {
+    unreveal(sections[prevIndex]);
+    setTimeout(() => {
+      sections[prevIndex].classList.replace('show', 'hide');
+      sections[index].classList.replace('hide', 'show');
+      reveal(sections[index]);
+      prevIndex = index;
+      if (index === 2) setSkills();
+    }, 500)
+  }
 }
 navitems.forEach((item, index) => {
   item.addEventListener('click', () => {
@@ -372,7 +373,7 @@ const createEmailBody = (nm, email, desc) => {
 }
 
 //alert
-const showAlert = (title,desc) => {
+const showAlert = (title, desc) => {
   let overlay = document.querySelector('.overlay');
   let ok = document.querySelector('.a-btn');
   let tit = document.querySelector('.a-title');
@@ -383,40 +384,40 @@ const showAlert = (title,desc) => {
   overlay.style.opacity = 0;
   setTimeout(() => {
     overlay.style.opacity = 1;
-  } ,100);
-  ok.addEventListener("click", ()=>{
+  }, 100);
+  ok.addEventListener("click", () => {
     overlay.style.opacity = 0;
     setTimeout(() => {
       overlay.style.display = "none";
-    } ,300);
-    
+    }, 300);
+
   });
-  
+
 }
 
 //Contact
 let name_ = document.querySelector(".name_");
 let email_ = document.querySelector(".email_");
 let description_ = document.querySelector(".description_");
-const token="123af0b0-cfb8-4db8-901f-837d852f11ec";
+const token = "123af0b0-cfb8-4db8-901f-837d852f11ec";
 
 const sendData = (nm, em, desc) => {
   Email.send({
-    SecureToken : token,
-    To : "sidhu3612@gmail.com",
-    From : "xidhu.me@gmail.com",
-    Subject : "Someone Contacted",
-    Body : createEmailBody(nm, em, desc),
-}).then(
+    SecureToken: token,
+    To: "sidhu3612@gmail.com",
+    From: "xidhu.me@gmail.com",
+    Subject: "Someone Contacted",
+    Body: createEmailBody(nm, em, desc),
+  }).then(
     (msg) => {
       console.log(msg);
       Email.send({
-        SecureToken : token,
-        To : em,
-        From : "xidhu.me@gmail.com",
-        Subject : "Xidhu",
-        Body : createEmailBody(nm, false, false),
-    }).then((message) => showAlert(message == "OK" ?"Message Sent":"Message Not Sent" ,message == "OK" ? "Message Sent.Check Your Mail Spam Folder" : "Message Not Sent.Try Again."));
+        SecureToken: token,
+        To: em,
+        From: "xidhu.me@gmail.com",
+        Subject: "Xidhu",
+        Body: createEmailBody(nm, false, false),
+      }).then((message) => showAlert(message == "OK" ? "Message Sent" : "Message Not Sent", message == "OK" ? "Message Sent.Check Your Mail Spam Folder" : "Message Not Sent.Try Again."));
     }
   );
 };
@@ -431,14 +432,23 @@ const submitData = () => {
         email_.value = "";
         description_.value = "";
       } else {
-        showAlert("Description","Please Enter Description");
+        showAlert("Description", "Please Enter Description");
       }
     } else {
-      showAlert("Email","Please Enter Proper Email");
+      showAlert("Email", "Please Enter Proper Email");
     }
   } else {
-    showAlert("Name","Please Enter Your Name");
+    showAlert("Name", "Please Enter Your Name");
   }
 };
 
 document.querySelector('.submit').addEventListener('click', () => submitData());
+
+//load
+window.onload = function () {
+  setTimeout(function () {
+    document.body.style.display = "block";
+    document.body.style.opacity = 1;
+    reveal(sections[0]);
+  }, 500);
+};
