@@ -399,7 +399,7 @@ const showAlert = (title, desc) => {
 let name_ = document.querySelector(".name_");
 let email_ = document.querySelector(".email_");
 let description_ = document.querySelector(".description_");
-const token = "123af0b0-cfb8-4db8-901f-837d852f11ec";
+const token = "628b9de2-bd95-403f-abb9-72df7571192a";
 
 const sendData = (nm, em, desc) => {
   Email.send({
@@ -452,3 +452,4 @@ window.onload = function () {
     reveal(sections[0]);
   }, 500);
 };
+
