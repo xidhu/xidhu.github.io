@@ -356,6 +356,34 @@ a{
         display: block;
     }
 
+    .btn-p{
+        display: flex;
+        margin:1rem 0;
+        background-color:var(--light-grey);
+        max-width: 12em;
+        padding:1rem;
+        align-items: center;
+        justify-content: center;
+        border-radius:2rem;
+        font-size:1.2rem;
+        
+        
+        
+    }
+
+    .head{
+        font-size: 3rem;
+    }
+
+    .my-name{
+        font-size:5rem;
+    }
+
+    .my-desc{
+        font-size:1.5rem;
+        line-height:1.5;
+    }
+
     .github-corner{
         display: none;
     }
