@@ -389,11 +389,11 @@ a{
         
         width:2rem;
         height:2rem;
+        
     }
 
     .form-input {
         align-items: center;
-        justify-content: center;
         display: flex;
         flex-direction: row;
         width: 25rem;
@@ -405,6 +405,7 @@ a{
         border: 2px solid rgba(242, 199, 68, 0.58);
         box-sizing: border-box;
         border-radius: 6px;
+        padding-left: 1rem;
         
       }
     
@@ -417,8 +418,14 @@ a{
       }
       .input-des > *{
         margin-top: 1rem;
-        margin-left: -1.5rem;
+       
       }
+
+      .input-des > textarea{
+        margin-top: 1.1rem;
+       
+      }
+      
 
       .submit{
           margin-left:10rem;
@@ -432,6 +439,7 @@ a{
         font-size: 1rem;
         color: var(--primary-color);
         margin-left: 1rem;
+        
         max-width: 80rem;
         overflow: hidden;
         resize: none;
@@ -763,6 +771,13 @@ a{
       .input-des > *{
         margin-top: 1rem;
         text-decoration: none;
+        
+        
+      }
+
+      .input-des > textarea{
+        margin-left: 0.8rem;
+        
         
       }
 
