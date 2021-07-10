@@ -137,6 +137,7 @@ body{
     color: var(--white);
     overflow-y: scroll;
     overflow-x: scroll;
+    background-repeat: no-repeat;
     scroll-behavior: smooth;
     display: none;
     opacity: 0;
