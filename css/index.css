@@ -356,19 +356,11 @@ a{
         display: block;
     }
 
-    .btn-p{
-        display: flex;
-        margin:1rem 0;
-        background-color:var(--light-grey);
+    .see-more{
         max-width: 12em;
         padding:1rem;
-        align-items: center;
-        justify-content: center;
-        border-radius:2rem;
         font-size:1.2rem;
-        
-        
-        
+
     }
 
     .head{
