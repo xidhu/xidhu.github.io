@@ -297,12 +297,12 @@ const projects = [{
   src: "https://github.com/xidhu/Gchat"
 }, {
   name: "WeNow",
-  desc: "Weather forcasting App+APi.",
+  desc: "Weather forecasting App+APi.",
   img: "./assets/svg/wenow.svg",
   src: "https://github.com/xidhu/weNow-App"
 }, {
   name: "FoodHunt",
-  desc: "Food Delivery App.",
+  desc: "Food Ordering App.",
   img: "./assets/svg/foodhunt.svg",
   src: "https://github.com/xidhu/FoodHunt"
 }];
