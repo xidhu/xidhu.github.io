@@ -12,24 +12,15 @@
     height: 100%;
     background-color:#0F0F0F;
     z-index: 100;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
     
 }
+
 
 .preloader{
-    position: absolute;
-    bottom: 50vh;
-    right: 50vw;
-    width: 5rem;
-    height:5rem;
-    
-}
-
-@media only screen and (max-width:800px)  {
-    .preloader{
-        bottom: 50vh;
-        right:30vw;
-        
-    }
+  margin-bottom: 40vh;
 }
 
 @keyframes ldio-ar868rr3649 {
