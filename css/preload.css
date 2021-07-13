@@ -1,17 +1,13 @@
 
-.content{
-    display:none;
-    opacity: 0;
-}
 .overlay-pre{
-    visibility: visible;
+
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background-color:#0F0F0F;
-    z-index: 100;
+    z-index: 12;
     align-items: center;
     display: flex;
     justify-content: space-around;
@@ -20,7 +16,7 @@
 
 
 .preloader{
-  margin-bottom: 40vh;
+  margin-bottom: 20vh;
 }
 
 @keyframes ldio-ar868rr3649 {

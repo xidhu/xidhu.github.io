@@ -3,12 +3,12 @@ document.onreadystatechange = function() {
         document.querySelector(
           ".content").style.display = "none";
         document.querySelector(
-          ".overlay-pre").style.visibility = "visible";
+          ".overlay-pre").style.display = "flex";
           
     } else {
         document.querySelector(
           ".overlay-pre").style.display = "none";
-          document.querySelector(".content").style.visibility = "visible";
+          document.querySelector(".content").style.display = "block";
          
           
     }
