@@ -444,12 +444,7 @@ const submitData = () => {
 
 document.querySelector('.submit').addEventListener('click', () => submitData());
 
-//load
-window.onload = function () {
-  setTimeout(function () {
-    document.body.style.display = "block";
-    document.body.style.opacity = 1;
-    reveal(sections[0]);
-  }, 500);
-};
+window.onload = function (){
+  reveal(sections[0]);
+}
 
