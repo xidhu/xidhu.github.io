@@ -152,11 +152,11 @@ navitems.forEach((item, index) => {
 let drawer_btn = document.querySelector('.drawer-btn');
 let drawer = document.querySelector('.drawer');
 
-const slider_pos_mob = ['1.7rem',
-  '6.4rem',
-  '10.6rem',
-  '15.4rem',
-  '20.9rem']
+const slider_pos_mob = ['1.2rem',
+  '5.9rem',
+  '10.1rem',
+  '14.9rem',
+  '20.4rem']
 let navitems_mob = document.querySelectorAll('.nav-item-mob');
 let navSlider_mob = document.body.querySelector('.navbar-scroller-mob');
 navitems_mob.forEach((item, index) => {

@@ -1046,11 +1046,11 @@ a{
     }
     
     .navbar-scroller-mob{
-        width:1rem;
-        height:0.3rem;
+        width:2rem;
+        height:0.16rem;
         position: relative;
         top:0.5rem;
-        left:1.7rem;
+        left:1.2rem;
         border-radius: 100rem;
         background-color:var(--primary-color);
         
