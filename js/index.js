@@ -1,4 +1,4 @@
-
+let isMobile = window.innerWidth < window.innerHeight ? true : false;
 
 
 //ripple effect
@@ -171,6 +171,33 @@ navitems_mob.forEach((item, index) => {
 });
 
 
+  let y = 0,dy = 0;
+  document.body.ontouchstart = (e) =>{
+    y = e.touches[0].clientY;
+    dy = y;
+  }
+  
+  document.body.ontouchmove = (e) => {
+    dy = e.touches[0].clientY;
+  }
+
+  document.ontouchend = (e) =>{
+    
+    let index;
+    if(Math.abs(y - dy) > 200){
+      if(y > dy)
+        index = (prevIndex + 1) % 5;
+      else
+        index = prevIndex == 0 ? 0 : prevIndex - 1;
+      
+        navSlider_mob.style.left = slider_pos_mob[index];
+        navSlider.style.left = slider_pos[index];
+        transition(index);
+    }
+  }
+
+
+
 let next = document.querySelector('.next');
 next.addEventListener('click', () => {
   let index = (prevIndex + 1) % 5;
@@ -205,7 +232,6 @@ see_more_btn.forEach((btn) => {
 let url = "https://api.github.com/users/xidhu/repos";
 let reponames, langRawList = [];
 let langs = [{ language: "HTML", count: 30, src: "./assets/png/icons/html.png" }, { language: "CSS", count: 20, src: "./assets/png/icons/css.png" }, { language: "JavaScript", count: 35, src: "./assets/png/icons/js.png" }, { language: "Dart", count: 25, src: "./assets/png/icons/dart.png" }, { language: "C", count: 28, src: "./assets/png/icons/c.png" }, { language: "Java", count: 32, src: "./assets/png/icons/java.png" }, { language: "Kotlin", count: 26, src: "./assets/png/icons/kt.png" }, { language: "Shell", count: 10, src: "./assets/png/icons/shell.png" }];
-let isMobile = window.innerWidth < window.innerHeight ? true : false;
 let langNames = [].slice.call(document.querySelectorAll('.skill-name > h3')).map((e) => { return e });
 let langPrgs = [].slice.call(document.querySelectorAll('.skill-ind')).map((e) => { return e });
 let langlogo = [].slice.call(document.querySelectorAll('.skill-logo > img')).map((e) => { return e });
