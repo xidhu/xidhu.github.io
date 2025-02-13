@@ -243,7 +243,7 @@ const setSkills = () => {
   setTimeout(() => {
     for (let i = 0; i < langNames.length; i++) {
 
-      let percentage = langs[i].count > 0 ? langs[i].count * 2 : 10;
+      let percentage = langs[i].count > 0 ? langs[i].count : 10;
       langNames[i].innerHTML = langs[i].language;
       langlogo[i].src = langs[i].src;
       langPrgs[i].style.transition = "all 2s ease-in-out";
