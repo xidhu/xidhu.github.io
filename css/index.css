@@ -474,7 +474,6 @@ a {
   align-self: center;
   flex-direction: row;
   width: 100vw;
-  margin-left: 30vw;
   height: 70vh;
  }
 
@@ -597,6 +596,7 @@ a {
  .contact-container {
   display: flex;
   flex-direction: row;
+  margin-left: 10vw;
  }
 
  .contact-left {
@@ -813,8 +813,8 @@ a {
  }
 
  .main-image>img {
-  width: 30rem;
-  height: 30rem;
+  width: 40rem;
+  height: 40rem;
   align-self: center;
   margin-left: 5rem;
   margin-top: 2rem;
